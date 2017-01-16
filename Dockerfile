@@ -15,7 +15,7 @@ ADD build/jdk-${JDK_VERSION}u${JDK_UPDATE}-${JDK_OS}-${JDK_ARCH}.tar.gz /usr/lib
 ENV JAVA_HOME /usr/lib/jdk1.${JDK_VERSION}.0_${JDK_UPDATE}
 ENV PATH $PATH:$JAVA_HOME/bin
 
-# Install Apache Maven.ADD
+# Install Apache Maven.
 ADD http://ftp.yz.yamagata-u.ac.jp/pub/network/apache/maven/maven-${MAVEN_MAJOR_VERSION}/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz /tmp
 RUN tar xzf /tmp/apache-maven-${MAVEN_VERSION}-bin.tar.gz -C /usr/lib
 RUN rm /tmp/apache-maven-${MAVEN_VERSION}-bin.tar.gz
