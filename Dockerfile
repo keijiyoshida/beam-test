@@ -21,3 +21,9 @@ RUN tar xzf /tmp/apache-maven-${MAVEN_VERSION}-bin.tar.gz -C /usr/lib
 RUN rm /tmp/apache-maven-${MAVEN_VERSION}-bin.tar.gz
 ENV MAVEN_HOME /usr/lib/apache-maven-${MAVEN_VERSION}
 ENV PATH $PATH:$MAVEN_HOME/bin
+
+# Retrieve new lists of packages.
+RUN apt-get update
+
+# Install tree.
+RUN apt-get install -y tree
